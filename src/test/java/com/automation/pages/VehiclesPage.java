@@ -14,36 +14,36 @@ public class VehiclesPage {
 
 
     @FindBy(xpath = "//div[contains(text(),'Pleasure')]")
-    private  WebElement useforpleasure;
+    private WebElement useforpleasure;
 
-    @FindBy (xpath ="//input[@name='miles-0']")
+    @FindBy(xpath = "//input[@name='miles-0']")
     private WebElement mileage;
 
-    @FindBy (xpath = "//div[contains(text(),'per month')]")
+    @FindBy(xpath = "//div[contains(text(),'per month')]")
     private WebElement permonth;
 
-    @FindBy (xpath = "//div[contains(text(),'Lease')]")
+    @FindBy(xpath = "//div[contains(text(),'Lease')]")
     private WebElement chooseforLease;
 
-    public void clickchooseLease(){
+    public void clickchooseLease() {
         BrowserUtils.wait(3);
         chooseforLease.click();
         BrowserUtils.wait(2);
     }
 
-    public void clickpermonth(){
+    public void clickpermonth() {
         BrowserUtils.wait(3);
         permonth.click();
         BrowserUtils.wait(2);
     }
 
-    public void inputmiles(String miles){
+    public void inputmiles(String miles) {
         BrowserUtils.wait(2);
         mileage.sendKeys(miles);
         BrowserUtils.wait(2);
     }
 
-    public void clickButPleasure(){
+    public void clickButPleasure() {
         BrowserUtils.wait(3);
         useforpleasure.click();
         BrowserUtils.wait(2);
@@ -63,26 +63,25 @@ public class VehiclesPage {
     @FindBy(xpath = "//div[contains(text(),'4dr SUV')]")
     private WebElement selectvehiclesubmodel;
 
-    public void inputvehiclesubmodel(){
+    public void inputvehiclesubmodel() {
         BrowserUtils.wait(2);
         selectvehiclesubmodel.click();
     }
 
-    public void inputvehiclemodel(){
+    public void inputvehiclemodel() {
         BrowserUtils.wait(2);
         selectvehiclemodel.click();
     }
 
-    public void inputVehiclesYear(){
+    public void inputVehiclesYear() {
         BrowserUtils.wait(2);
         selectVehiclesYear.click();
     }
 
-    public void inputVehiclesMake(){
+    public void inputVehiclesMake() {
         BrowserUtils.wait(2);
         selectVehiclesMake.click();
     }
-
 
 
 }

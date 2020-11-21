@@ -33,42 +33,44 @@ public class startPage extends AbstractPage {
     @FindBy(xpath = "//input[@id='date_of_birth-0']")
     private WebElement inputDateB;
 
-    public void inputDateofBrith(String dateofBirth){
+    public void inputDateofBrith(String dateofBirth) {
         BrowserUtils.wait(2);
         inputDateB.sendKeys(dateofBirth);
     }
 
-    public void inputLastName(String lastname){
+    public void inputLastName(String lastname) {
         BrowserUtils.wait(2);
         inputLastN.sendKeys(lastname);
     }
-    public void inputFirstName(String frisname){
+
+    public void inputFirstName(String frisname) {
         BrowserUtils.wait(2);
         inputFirstN.sendKeys(frisname);
     }
 
-    public void inputunitNum(String unit){
+    public void inputunitNum(String unit) {
         BrowserUtils.wait(2);
         inputUnit.sendKeys(unit);
     }
-    public void inputAddress(String address){
+
+    public void inputAddress(String address) {
         BrowserUtils.wait(2);
         inputAddress.sendKeys(address);
     }
 
-    public void clickCheckBox(){
+    public void clickCheckBox() {
         BrowserUtils.wait(2);
         wait.until(ExpectedConditions.elementToBeClickable(checkBoxYes));
         checkBoxYes.click();
     }
 
-    public void clickRentCheckBox(){
+    public void clickRentCheckBox() {
         BrowserUtils.wait(2);
         wait.until(ExpectedConditions.elementToBeClickable(rentChckBox));
         rentChckBox.click();
     }
 
-    public void clickPayingCheckbox(){
+    public void clickPayingCheckbox() {
         BrowserUtils.wait(2);
         //wait.until(ExpectedConditions.invisibilityOf(payChechBox));
         payChechBox.click();

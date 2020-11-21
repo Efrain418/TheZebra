@@ -18,12 +18,12 @@ public abstract class AbstractTestBase {
         String URL = ConfigurationReader.getProperty("qa3");
         Driver.getDriver().get(URL);
         Driver.getDriver().manage().window().maximize();
-        wait = new WebDriverWait(Driver.getDriver(),25);
+        wait = new WebDriverWait(Driver.getDriver(), 25);
         actions = new Actions(Driver.getDriver());
     }
 
     @AfterMethod
-    public void teardow () {
+    public void teardow() {
 //        BrowserUtils.wait(2);
 //        Driver.closeDriver();
     }

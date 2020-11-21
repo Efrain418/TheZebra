@@ -23,21 +23,23 @@ public abstract class AbstractPage {
         PageFactory.initElements(driver, this);
     }
 
-    public String getTitle(){
-        return   Driver.getDriver().getTitle();
+    public String getTitle() {
+        return Driver.getDriver().getTitle();
     }
-    public void clickSaveAndCountinue(){
+
+    public void clickSaveAndCountinue() {
         BrowserUtils.wait(2);
         saveAndCountinue.click();
     }
-    public void navigateTo(String tabName, String moduleName){
+
+    public void navigateTo(String tabName, String moduleName) {
         String tabNameXpath = "//span[contains(text()," + tabName + ")]";
         String moduleXpath = "//a[contains(text()," + moduleName + "]";
 
         WebElement tabElment = driver.findElement(By.xpath(tabNameXpath));
         WebElement moduleElment = driver.findElement(By.xpath(moduleXpath));
 
-        Actions actions= new Actions(driver);
+        Actions actions = new Actions(driver);
 
         BrowserUtils.wait(4);
 

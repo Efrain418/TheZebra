@@ -16,20 +16,25 @@ public class Test_HomePage extends AbstractTestBase {
 
     @Test(description = "Verify the home page and Title")
     public void getHomepageTitle() {
+        test = report.createTest("Verify default Title ");
         HomePage homePage = new HomePage();
         String titile = "The Zebra: Instantly Compare Insurance Quotes";
         Assert.assertEquals(homePage.getTitle(), titile);
+        test.pass("Default titile verified");
     }
 
     @Test(description = "Verify the home page and URL")
     public void GETUrlVerify() {
+        test = report.createTest("Verify the URL ");
         String Accualurl = Driver.getDriver().getCurrentUrl();
         String ExpactedURL = ConfigurationReader.getProperty("qa3");
         Assert.assertEquals(Accualurl, ExpactedURL);
+        test.pass("home page verified");
     }
 
     @Test(description = "Verify the home page and text")
     public void verifyVisibleText() {
+        test = report.createTest("Verify the visible Text ");
         String expectedresult = "Compare insurance quotes instantly.";
         String actual = Driver.getDriver().findElement(By.tagName("H3")).getText();
         if (expectedresult.equals(actual)) {
@@ -37,11 +42,12 @@ public class Test_HomePage extends AbstractTestBase {
         } else {
             System.out.println("Test Failed");
         }
+        test.pass("visible Text verified");
     }
 
     @Test(description = "print the Compare Menue and verify of them present or NoT")
     public void verifyCompare() {
-        Actions actions = new Actions(Driver.getDriver());
+        test = report.createTest("Verify the compare sub mene ");
         WebElement link = Driver.getDriver().findElement(By.xpath("//span[text()='Compare']"));
         actions.moveToElement(link).build().perform();
         Assert.assertTrue(link.isDisplayed());
@@ -61,7 +67,7 @@ public class Test_HomePage extends AbstractTestBase {
             Assert.assertTrue(getText.contains("Insurance By State"));
             Assert.assertTrue(getText.contains("Best Insurance Companies"));
             Assert.assertTrue(getText.contains("Other Insurance"));
-
+            test = report.createTest("sub menu verified ");
         }
     }
 }

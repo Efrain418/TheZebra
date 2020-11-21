@@ -16,7 +16,7 @@ public class Test_Get_Quote extends AbstractTestBase {
     startPage startPage = new startPage();
     VehiclesPage vehiclesPage = new VehiclesPage();
 
-    @Test
+    @Test(description = "Car Insurance get quote pages")
     public void StarGetQuotePage() {
         homePage.inputzipcode("98101");
         startPage.clickCheckBox();

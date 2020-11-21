@@ -17,7 +17,7 @@ public class Test_Get_Quote extends AbstractTestBase {
     VehiclesPage vehiclesPage = new VehiclesPage();
 
     @Test
-    public void inputallInfor() {
+    public void StarGetQuotePage() {
         homePage.inputzipcode("98101");
         startPage.clickCheckBox();
         startPage.clickRentCheckBox();
@@ -89,7 +89,7 @@ public class Test_Get_Quote extends AbstractTestBase {
         checkBoxExprince.click();
         BrowserUtils.wait(2);
 
-////div[@class='custom-dropdown__indicator']
+        ////div[@class='custom-dropdown__indicator']
         WebElement insurenceCompnay1 = Driver.getDriver().findElement(By.xpath("//div[@class='custom-dropdown__indicator']"));
         insurenceCompnay1.click();
         BrowserUtils.wait(2);
@@ -116,7 +116,6 @@ public class Test_Get_Quote extends AbstractTestBase {
         BrowserUtils.wait(2);
         inputEmail.sendKeys("alexhHola@gmal.com");
         BrowserUtils.wait(2);
-
 
 //        WebElement chooseNo2= Driver.getDriver().findElement(By.xpath("//input[@id='is_interested_in_account-false-undefined']"));
 //        BrowserUtils.wait(2);

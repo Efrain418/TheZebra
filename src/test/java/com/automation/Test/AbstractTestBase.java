@@ -24,8 +24,8 @@ public abstract class AbstractTestBase {
 
     @AfterMethod
     public void teardow() {
-//        BrowserUtils.wait(2);
-//        Driver.closeDriver();
+      BrowserUtils.wait(1);
+       Driver.closeDriver();
     }
 
 }

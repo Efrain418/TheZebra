@@ -15,14 +15,14 @@ public class Test_HomePage extends AbstractTestBase {
 
 
     @Test(description = "Verify the home page and Title")
-    public void homepageTitle() {
+    public void getHomepageTitle() {
         HomePage homePage = new HomePage();
         String titile = "The Zebra: Instantly Compare Insurance Quotes";
         Assert.assertEquals(homePage.getTitle(), titile);
     }
 
     @Test(description = "Verify the home page and URL")
-    public void verifyUrl() {
+    public void GETUrlVerify() {
         String Accualurl = Driver.getDriver().getCurrentUrl();
         String ExpactedURL = ConfigurationReader.getProperty("qa3");
         Assert.assertEquals(Accualurl, ExpactedURL);
@@ -47,12 +47,8 @@ public class Test_HomePage extends AbstractTestBase {
         Assert.assertTrue(link.isDisplayed());
 
         List<WebElement> link2 = Driver.getDriver().findElements(By.xpath("//div[2]/div[3]/div[1]/ul[1]"));
-        BrowserUtils.wait(3);
-        int leang = link2.size();
         BrowserUtils.wait(2);
-        System.out.println(" uzun : "+leang);
         for (WebElement each : link2) {
-            BrowserUtils.wait(3);
             String getText = each.getText();
             System.out.println(getText);
 
